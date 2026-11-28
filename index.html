@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with Byte Bistro and explore a GitHub profile.">
+  <title>Customer Portal | Byte Bistro</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#top" aria-label="Byte Bistro home"><span class="brand-mark" aria-hidden="true">B.</span> Byte Bistro</a>
+      <nav aria-label="Main navigation">
+        <a href="#contact">Contact</a>
+        <a href="#github">GitHub explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">THE CUSTOMER PORTAL <span aria-hidden="true">✦</span></p>
+        <h1 id="hero-title">Good food. <span>Great conversation.</span></h1>
+        <p>Questions, ideas, or just want to say hello? Pull up a chair. We’d love to hear what’s on your mind.</p>
+        <a class="button button-light" href="#contact">Start a conversation <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <div class="container main-content">
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-intro">
+          <p class="eyebrow">LET’S CONNECT</p>
+          <h2 id="contact-title">Send us a note.</h2>
+          <p>We’re always happy to hear from you. Fill in the form and we’ll check that everything looks good.</p>
+          <div class="intro-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <p><strong>A little heads-up</strong><br>This is a demo portal. Your message stays in your browser and is not sent.</p>
+          </div>
+        </div>
+
+        <div class="card form-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">CONTACT FORM</p><h3>Tell us what’s up</h3></div>
+            <span class="card-icon" aria-hidden="true">✉</span>
+          </div>
+          <p class="form-hint">All fields are required <span aria-hidden="true">*</span></p>
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+              <input id="full-name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="error" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="error" id="email-error"></p>
+            </div>
+            <div class="field">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input id="subject" name="subject" type="text" required aria-describedby="subject-error">
+              <p class="error" id="subject-error"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+              <p class="error" id="message-error"></p>
+            </div>
+            <button class="button button-primary" type="submit">Check message <span aria-hidden="true">→</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="api-section" id="github" aria-labelledby="github-title">
+        <div class="api-copy">
+          <p class="eyebrow">SOMETHING EXTRA</p>
+          <h2 id="github-title">A little profile peek.</h2>
+          <p>Curious about the people behind the code? Explore a public GitHub profile using the GitHub Users API.</p>
+          <span class="api-badge"><span aria-hidden="true">●</span> POWERED BY THE GITHUB API</span>
+        </div>
+        <div class="card api-card">
+          <h3>GitHub profile explorer</h3>
+          <p>Try <strong>octocat</strong> to get started.</p>
+          <form id="github-form">
+            <label for="github-username">GitHub username</label>
+            <div class="search-row">
+              <input id="github-username" name="username" type="text" autocomplete="off" placeholder="e.g. octocat" aria-describedby="github-help">
+              <button class="button button-primary" type="submit">Load profile</button>
+            </div>
+            <p class="helper" id="github-help">Public profiles only. No account or token needed.</p>
+          </form>
+          <p class="api-status" id="github-status" role="status" aria-live="polite"></p>
+          <div class="profile" id="github-profile" hidden>
+            <img id="profile-image" alt="" width="72" height="72">
+            <div>
+              <h4 id="profile-name"></h4>
+              <p id="profile-bio"></p>
+              <a id="profile-link" target="_blank" rel="noopener noreferrer">View GitHub profile <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p><strong>Byte Bistro</strong> <span> /  Made for good conversation.</span></p>
+      <p>DEV.140 <span aria-hidden="true">✦</span> A frontend demonstration</p>
+    </div>
+  </footer>
+</body>
+</html>
